@@ -1,7 +1,7 @@
 .container ,#particles-js{
   z-index: 100;
 
-  
+  margin: auto;
 
   text-align: center
 
@@ -109,6 +109,15 @@ h1{
   z-index: 10;
   width: 100%;
   max-width: 180px;
+}
+
+@media (max-width:578px){
+  .mycard{
+    z-index: 10;
+    width: 100%;
+    max-width: 93px;
+  }
+
 }
 .mycard:hover{
   
