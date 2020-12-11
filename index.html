@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <link rel="stylesheet" href="style.css">
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, 
+                                  minimum-scale=1, maximum-scale=1, user-scalable=no"/> 
+      <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
+      <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/js/jQuery2.0.2.min.js')}"/>
+      <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/js/jquery.touchwipe.min.js')}"/>
+      <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/js/main.min.js')}"/>
+      
+   </head>
+   <body>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+
+<div id="particles-js">
+  <img id="spin2" src="spinngWeel.png"></img>
+  <div class="container">
+    <div id="spin_element">
+      <img id="logo" src="logo.png"></img>
+      <img id="spin" src="spinngWeel.png"></img>
+    </div>
+    <h1>凡娜緹雅</h1>
+    <h1>七脈輪精油占卜</h1>
+    <a id="btn" href="choose_card.html">『開始占卜』</a>
+  </div>
+
+</div>
+
+<script>
+ particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 355,
+      "density": {
+        "enable": true,
+        "value_area": 300
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "size_min": 0,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 30,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 500.91608391608392,
+        "size": 2,
+        "duration": 3,
+        "opacity": 1,
+        "speed": 10
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}); 
+ </script>
+
+
+
+
+   </body>
+
+</html>
