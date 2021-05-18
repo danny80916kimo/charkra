@@ -204,7 +204,7 @@ h1{
 
 
 .card{
-  margin: auto;
+  margin: auto 50px auto 50px ;;
   line-height:3em;
   color: azure;
   width: 40%;
@@ -232,9 +232,10 @@ h1{
 
 
 }
-@media (max-width:832px){
+@media (max-width:922px){
 
   .card{
+    margin: auto;
     line-height:2em;
     color: azure;
     width: 100%;
