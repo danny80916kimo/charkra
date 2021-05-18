@@ -9,10 +9,11 @@
 
 html {
   height:100%; 
+  font-family: PingFangSC-Ultrathin, sans-serif;
   
 }
 body{
-  z-index: -1;
+  /* z-index: -1; */
   margin: 0px;
 }
 canvas{
@@ -27,6 +28,7 @@ canvas{
   left: 0;
 }
 h1{
+  font-size:10fr;
   color: azure;
   font-family: PingFangSC-Ultrathin, sans-serif;
   letter-spacing: 20px;
@@ -73,6 +75,7 @@ h1{
 }
 
 .card-link{
+  z-index: 10000;
   width: 100%;
   color: azure;
   margin-top: 20px;
