@@ -30,6 +30,7 @@ h1{
   color: azure;
   font-family: PingFangSC-Ultrathin, sans-serif;
   letter-spacing: 20px;
+  margin-top: 30px;
 }
 #spin{
   margin:60px;
@@ -53,7 +54,7 @@ h1{
 }
 #spin_element{
   position: relative;; 
-
+  z-index: 0;
 }
 #btn{
   border-width: 5px;
@@ -71,7 +72,11 @@ h1{
   
 }
 
-
+.card-link{
+  width: 100%;
+  color: azure;
+  margin-top: 50px;
+}
 
 #spin2{
   position:absolute; 
@@ -111,14 +116,6 @@ h1{
   max-width: 180px;
 }
 
-@media (max-width:578px){
-  .mycard{
-    z-index: 10;
-    width: 100%;
-    max-width: 93px;
-  }
-
-}
 .mycard:hover{
   
   transform: scale(1.02);
@@ -130,8 +127,8 @@ h1{
 .card_container{
   z-index: 10;
   opacity: 1;
-  margin: 10%;
- display: flex;
+  margin: 10% 10% 2% 10%;%;
+  display: flex;
  flex-wrap: wrap; 
  opacity: 1;
  justify-content: space-around;
@@ -149,6 +146,53 @@ h1{
 margin-top: 60px;
   max-width: 400px;
   width: 70%;
+}
+
+
+.card{
+  line-height:3em;
+  color: azure;
+  width: 40%;
+  font-family: "Noto Sans TC";
+}
+
+.card-info{
+  
+}
+
+
+.card-title{
+  font-size:x-large;
+}
+
+
+
+@media (max-width:578px){
+  .mycard{
+    z-index: 10;
+    width: 100%;
+    max-width: 93px;
+  }
+
+
+
+}
+@media (max-width:832px){
+
+  .card{
+    line-height:2em;
+    color: azure;
+    width: 95%;
+    margin-top: 10px;
+
+  }
+  .reveal_card{
+    z-index: 100;
+  margin-top: 10px;
+    max-width: 400px;
+    width: 70%;
+  }
+
 }
 
 

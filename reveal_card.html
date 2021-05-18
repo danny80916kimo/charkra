@@ -1,174 +1,267 @@
 <!DOCTYPE html>
 <html>
-   <head>
-    <link rel="stylesheet" href="style.css">
-      <meta charset="utf-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, 
-                                  minimum-scale=1, maximum-scale=1, user-scalable=no"/> 
-      <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
-      <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/js/jQuery2.0.2.min.js')}"/>
-      <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/js/jquery.touchwipe.min.js')}"/>
-      <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/js/main.min.js')}"/>
-      
-   </head>
-   <body>
-   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-   <script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js"></script>
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" /> -->
-   <script>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, 
+                                  minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/css/app.min.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/js/jQuery2.0.2.min.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/js/jquery.touchwipe.min.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                'Mobile-Design-Templates-master/common/js/main.min.js')}" />
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" /> -->
+  <script>
     new WOW().init();
-    </script>
+  </script>
 
-   <div id="particles-js">
- <img id="spin2" src="spinngWeel.png"></img>
- <div class="container">
-  <h1>你抽到的牌是</h1>
-  <div class="card_container">
-    <a href="reveal_card"><img id="reveal_card" class="reveal_card animate__animated animate__flipInX" id="card1" src="card.png"></a>
+  <div id="particles-js">
+    <img id="spin2" src="spinngWeel.png"></img>
+    <div class="container">
+      <h1>你抽到的牌是</h1>
+      <div class="card_container">
+        <a href="reveal_card"><img id="reveal_card" class="reveal_card animate__animated animate__flipInX" id="card1"
+            src="card.png"></a>
+
+
+
+            <div class="card">
+
+
+              <div class="card-title" id="card-title">
+                好暖活-Kindly Warm
+              </div>
+              <div class="card-subtitle" id="card-subtitle">
+                海底輪(MULADHARA)
+              </div>
+              <div class="card-info" id="card-info">
+                我所經歷的一切充滿幸福
+                我能達到一切
+                我捨棄所有狹隘的信念
+                我使我的內心神聖無畏
+                <br>【掌管生存本能】
+                海底輪為最底輪，主導一切生存，
+                保持最佳身心狀態與安全感，
+                對於生命與生活充滿熱情與溫暖。
+                調整：身體與心靈缺乏的安全感
+                <br>採用精油：薰衣草、檸檬馬鞭草、洋甘菊
+              </div>
+
+            </div>
+
+                 
+            <div class="card-link">
+              點我購買
+            </div>
+
+      </div>
+ 
+
+
+
+    </div>
+
+
 
   </div>
 
-  </div>
-   
-
-
- </div>
-
- <script>
-   function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-   var cards=["1.png","2.png","3.png","4.png","5.png","6.png","7.png"]
-console.log(cards[getRandomInt(7)])
-var card = cards[getRandomInt(7)]
-var obj = document.getElementById("reveal_card");
-obj.setAttribute("src", card);
-
-
-
- </script>
-
-<script>
- particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 355,
-      "density": {
-        "enable": true,
-        "value_area": 300
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.48927153781200905,
-      "random": false,
-      "anim": {
-        "enable": true,
-        "speed": 0.2,
-        "opacity_min": 0,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 2,
-        "size_min": 0,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 30,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 1,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
+  <script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
     }
+    // var cards = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"]
+    var cards = [
+  {
+    "cardTitle": "好暖活-Kindly Warm",
+    "cardSubtitle": "海底輪(MULADHARA) CROWN CHAKRA",
+    "cardInfo": "我所經歷的一切充滿幸福\n我能達到一切\n我捨棄所有狹隘的信念\n我使我的內心神聖無畏\n【掌管生存本能】\n海底輪為最底輪，主導一切生存，\n保持最佳身心狀態與安全感，\n對於生命與生活充滿熱情與溫暖。\n調整：身體與心靈缺乏的安全感\n採用精油：薰衣草、檸檬馬鞭草、洋甘菊",
+    "cardImage": "7.png"
   },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "bubble"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
+  {
+    "cardTitle": "好桃花-Fate of love",
+    "cardSubtitle": "臍輪(SWADHISTHAHA) SACRAL CHAKRA",
+    "cardInfo": "我的體內平靜安穩\n我選擇每天充滿快樂\n我毫無畏懼情感關係\n【掌管兩性與人際關係】\n臍輪代表性的能力，為人性根本，\n代表慾望及人際關係，掌握生活\n愉悅事物，並對人保持尊重與包容。\n調整：和諧的情侶關係、\n改善人際關係\n 採用精油：薰衣草、薄荷、洋甘菊",
+    "cardImage": "6.png"
+  },
+  {
+    "cardTitle": "好旺旺-Good Luck",
+    "cardSubtitle": "太陽神經叢(MANIPURA) SOLAR PLEXUS CHAKRA",
+    "cardInfo": "我充滿能量\n我可以達到一切\n我是我生命中的建築者\n我充分的享受我的人生\n【掌管自我認同】\n太陽神經叢幫助找尋自我認同感，\n感受自我，尋找自己的定位，\n傾聽內心真正的聲音。\n調整：尋找自我，發自內心的自信心\n採用精油： 薄荷、檸檬馬鞭草、洋甘菊",
+    "cardImage": "4.png"
+  },
+  {
+    "cardTitle": "好心情-Good Mood",
+    "cardSubtitle": "心輪(ANAHATA) HEART CHAKRA",
+    "cardInfo": "我愛且接受自己\n我的心是敞開的\n我是平靜的\n我相信自我也相信這一切\n【掌管愛與安全感】\n心輪是內在與外在連結的脈輪，\n如潔淨美麗的蓮花，出淤泥而不染，一切事物皆在掌握之中。\n調整：以理性視野看待一切。",
+    "cardImage": "2.png"
+  },
+  {
+    "cardTitle": "好自然-Step in Nature",
+    "cardSubtitle": "喉輪(VISHUDDHA) THROAT CHAKRA",
+    "cardInfo": "我為自己發聲\n我的聲音純淨有力量\n創造力在我的體內流動\n我是自己的導引\n【掌管溝通能力】\n喉輪幫助我們認清自我，並向外人表達真誠情感。\n調整：調整自己的溝通與內省，\n展現人際關係的自在與自信\n採用精油：薄荷、花梨木、檸檬馬鞭草",
+    "cardImage": "3.png"
+  },
+  {
+    "cardTitle": "好慵懶-Lazy Cozy",
+    "cardSubtitle": "眉心輪(AJNA) THIRD-EYE CHAKRA",
+    "cardInfo": "我從最高的自我中獲得指引\n我活在此時此刻\n我尋求的一切就在我的內心\n我展望著美好正向的未來\n【掌管思考能力】\n位於兩眉之間的眉輪，像似第三隻眼，幫助我們平靜判斷事物。\n調整：心平靜和，放鬆，讓緊繃的心情平靜，思慮清晰\n採用精油：花梨木、佛手柑、洋甘菊",
+    "cardImage": "5.png"
+  },
+  {
+    "cardTitle": "好好睡-Relaxing & Release",
+    "cardSubtitle": "頂輪(SAHASRARA) ROOT CHAKRA",
+    "cardInfo": "我深根在這\n我屬於這裡\n我放下一切懷疑與擔憂\n我擁有一切我需要的。\n【掌管靈性、人體能量的中心】\n專注自我，靜夜中自我平靜對話，\n深夜中感受內心溫暖。\n調整：平靜內在，自我對話，\n並給予身心良好睡眠。\n採用精油：佛手柑、薰衣草、花梨木",
+    "cardImage": "1.png"
+  }
+]
+
+
+
+
+    var randomNum = getRandomInt(7)
+
+    console.log(cards[randomNum])
+    
+    var card = cards[randomNum]
+    var obj = document.getElementById("reveal_card");
+    obj.setAttribute("src", card.cardImage);
+
+    document.getElementById("card-title").innerHTML = cards[randomNum].cardTitle;
+    document.getElementById("card-subtitle").innerHTML = cards[randomNum].cardSubtitle;
+    document.getElementById("card-info").innerHTML = cards[randomNum].cardInfo;
+
+
+
+  </script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 355,
+          "density": {
+            "enable": true,
+            "value_area": 300
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.48927153781200905,
+          "random": false,
+          "anim": {
+            "enable": true,
+            "speed": 0.2,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 2,
+            "size_min": 0,
+            "sync": false
+          }
+        },
         "line_linked": {
-          "opacity": 1
+          "enable": false,
+          "distance": 30,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
         }
       },
-      "bubble": {
-        "distance": 500.91608391608392,
-        "size": 2,
-        "duration": 3,
-        "opacity": 1,
-        "speed": 10
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "bubble"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 500.91608391608392,
+            "size": 2,
+            "duration": 3,
+            "opacity": 1,
+            "speed": 10
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
       },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-}); 
- </script>
+      "retina_detect": true
+    });
+  </script>
 
 
 
 
 
-   </body>
+</body>
 
 </html>
