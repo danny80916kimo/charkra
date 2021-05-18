@@ -75,8 +75,15 @@ h1{
 .card-link{
   width: 100%;
   color: azure;
-  margin-top: 50px;
+  margin-top: 20px;
+  text-decoration: none;
 }
+.card-link:hover,:link,:active,:visited{
+  text-decoration: none;
+  color: azure;
+}
+
+
 
 #spin2{
   position:absolute; 
