@@ -59,22 +59,53 @@ h1{
   z-index: 0;
 }
 #btn{
-  border-width: 5px;
+  padding: 10px;
+  border-style:solid;
+  border-width: 2px;
   border-color: azure;
   color: azure;
-  font-family: PingFangSC-Thin, sans-serif;
+  font-family: PingFangSC, sans-serif;
   font-size: large;
   text-decoration: none;
+  border-radius: 10px;
+
 
 }
 #btn:hover{
   /* background-color: blue; */
   color: blanchedalmond;
+  border-color: blanchedalmond;
+  z-index: 100;
+  
+}
+.btn{
+  /* margin-top: 20px; */
+  /* margin-top: 100px; */
+  padding: 3px 10px 3px 10px ;
+  border-style:solid;
+  border-width: 2px;
+  border-color: azure;
+  color: azure;
+  font-family: PingFangSC, sans-serif;
+  font-size: large;
+  text-decoration: none;
+  border-radius: 10px;
+
+
+}
+
+
+
+
+.btn:hover{
+  /* background-color: blue; */
+  color: blanchedalmond;
+  border-color: blanchedalmond;
   z-index: 100;
   
 }
 
-.card-link{
+/* .card-link{
   z-index: 10000;
   width: 100%;
   color: azure;
@@ -84,7 +115,7 @@ h1{
 .card-link:hover,:link,:active,:visited{
   text-decoration: none;
   color: azure;
-}
+} */
 
 
 
@@ -119,6 +150,11 @@ h1{
   to {
       transform:rotate(-360deg);
   }
+}
+
+
+.card-info{
+  padding: 10px;
 }
 .mycard{
   z-index: 10;
