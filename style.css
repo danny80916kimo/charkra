@@ -105,6 +105,11 @@ h1{
   z-index: 100;
   
 }
+.card-link{
+
+  color: azure;
+
+}
 
 /* .card-link{
   z-index: 10000;
