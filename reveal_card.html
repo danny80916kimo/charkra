@@ -29,7 +29,7 @@
   <div id="particles-js">
     <img id="spin2" src="spinngWeel.png"></img>
     <div class="container">
-      <h1>你抽到的牌是</h1>
+      <h2>你抽到的牌是</h2>
       <div class="card_container">
         <a href="reveal_card"><img id="reveal_card" class="reveal_card animate__animated animate__flipInX" id="card1"
             src="card.png"></a>
@@ -57,6 +57,7 @@
                 調整：身體與心靈缺乏的安全感
                 <br>採用精油：薰衣草、檸檬馬鞭草、洋甘菊
               </div>
+              <div class="card-oil" id="card-oil"></div>
 
             </div>
 
@@ -66,7 +67,8 @@
       </div>
       <div class="card-link">
         <a class="btn" id="link" href="">點我了解更多</a>
-        <a class="btn" id="link" href="">下載分享給好友</a>
+        <br></br>
+        <a class="btn" id="downloadlink" download="VenetiaCard" href="">下載分享給好友</a>
         <p>凡娜緹雅七脈輪精油</p>
       </div>
 
@@ -88,52 +90,66 @@
     var cards = [
   {
     "cardTitle": "好暖活-Kindly Warm",
-    "cardSubtitle": "海底輪(MULADHARA) CROWN CHAKRA",
-    "cardInfo": "我所經歷的一切充滿幸福\n我能達到一切\n我捨棄所有狹隘的信念\n我使我的內心神聖無畏\n【掌管生存本能】\n海底輪為最底輪，主導一切生存，\n保持最佳身心狀態與安全感，\n對於生命與生活充滿熱情與溫暖。\n調整：身體與心靈缺乏的安全感",
+    "cardSubtitle": "海底輪 ROOT CHAKRA<br>#專注 #平靜",
+    "cardInfo": "今年的能量目標：生活重心的「回歸」<br>新的一年，回歸最初始的自己，幫助回歸平衡，你會發現滿滿的富足與幸福感。",
+    "cardOil":"｜檸檬馬鞭草、薄荷、佛手柑｜",
     "cardImage": "7.png",
-    "link": "https://www.savunbio.com/products/kindlywarm"
+    "link": "https://www.savunbio.com/products/kindlywarm",
+    "downloadImage":"download-7.jpg"
   },
   {
     "cardTitle": "好桃花-Fate of love",
-    "cardSubtitle": "臍輪(SWADHISTHAHA) SACRAL CHAKRA",
-    "cardInfo": "我的體內平靜安穩\n我選擇每天充滿快樂\n我毫無畏懼情感關係\n【掌管兩性與人際關係】\n臍輪代表性的能力，為人性根本，\n代表慾望及人際關係，掌握生活\n愉悅事物，並對人保持尊重與包容。\n調整：和諧的情侶關係、\n改善人際關係",
+    "cardSubtitle": "臍輪SACRAL CHAKRA<br>#自信魅力 #吸引力",
+    "cardInfo": "今年的能量目標：「理解」與接納情感關係<br>帶給你擁有自我滿足的情緒，多點理解與接納彼此，才有能量去開啟情感關係的對話。",
+    "cardOil":"｜薰衣草｜薄荷｜洋甘菊｜",
     "cardImage": "6.png",
-    "link": "https://www.savunbio.com/products/fate-in-love"
+    "link": "https://www.savunbio.com/products/fate-in-love",
+    "downloadImage":"download-6.jpg"
   },
   {
     "cardTitle": "好旺旺-Good Luck",
-    "cardSubtitle": "太陽神經叢(MANIPURA) SOLAR PLEXUS CHAKRA",
-    "cardInfo": "我充滿能量\n我可以達到一切\n我是我生命中的建築者\n我充分的享受我的人生\n【掌管自我認同】\n太陽神經叢幫助找尋自我認同感，\n感受自我，尋找自己的定位，\n傾聽內心真正的聲音。\n調整：尋找自我，發自內心的自信心",
+    "cardSubtitle": "太陽神經叢 SOLAR PLEXUS CHAKRA <br>#正能量 #運氣提升",
+    "cardInfo": "今年的能量目標：自我目標的「實現」<br>自我成就的突破、勇於面對一切，自信的面對接下來的挑戰",
+    "cardOil":"｜薄荷｜檸檬馬鞭草｜洋甘菊｜",
     "cardImage": "4.png",
-    "link": "https://www.savunbio.com/products/good-luck"
+    "link": "https://www.savunbio.com/products/good-luck",
+    "downloadImage":"download-5.jpg"
   },
   {
     "cardTitle": "好心情-Good Mood",
-    "cardSubtitle": "心輪(ANAHATA) HEART CHAKRA",
-    "cardInfo": "我愛且接受自己\n我的心是敞開的\n我是平靜的\n我相信自我也相信這一切\n【掌管愛與安全感】\n心輪是內在與外在連結的脈輪，\n如潔淨美麗的蓮花，出淤泥而不染，一切事物皆在掌握之中。\n調整：以理性視野看待一切。",
+    "cardSubtitle": "心輪 HEART CHAKRA",
+    "cardInfo": "今年的能量目標：理性且「出淤泥而不染」<br>每天都會有各種情緒在紛擾自己，學著像朵純潔蓮花一樣，理性面對一切，將情緒化為養分。",
+    "cardOil":"｜檸檬馬鞭草｜薄荷｜佛手柑｜",
     "cardImage": "2.png",
-    "link": "https://www.savunbio.com/products/good-mood"
+    "link": "https://www.savunbio.com/products/good-mood",
+    "downloadImage":"download-4.jpg"
   },
   {
     "cardTitle": "好自然-Step in Nature",
-    "cardSubtitle": "喉輪(VISHUDDHA) THROAT CHAKRA",
-    "cardInfo": "我為自己發聲\n我的聲音純淨有力量\n創造力在我的體內流動\n我是自己的導引\n【掌管溝通能力】\n喉輪幫助我們認清自我，並向外人表達真誠情感。\n調整：調整自己的溝通與內省，\n展現人際關係的自在與自信",
+    "cardSubtitle": "喉輪THROAT CHAKRA<br>#回歸自我 #調整身心",
+    "cardInfo": "今年的目標：「集結」聆聽他人，深化自我<br>喉輪上達宇宙訊息、下引大地資源，能量匯集，深化自我。今年的你適合多與他人連結、集結他人散發的正面及知識，一切能量將轉化為自身能量。",
+    "cardOil":"｜薄荷｜花梨木｜檸檬馬鞭草｜",
     "cardImage": "3.png",
-    "link": "https://www.savunbio.com/products/step-in-nature"
+    "link": "https://www.savunbio.com/products/step-in-nature",
+    "downloadImage":"download-3.jpg"
   },
   {
     "cardTitle": "好慵懶-Lazy Cozy",
-    "cardSubtitle": "眉心輪(AJNA) THIRD-EYE CHAKRA",
-    "cardInfo": "我從最高的自我中獲得指引\n我活在此時此刻\n我尋求的一切就在我的內心\n我展望著美好正向的未來\n【掌管思考能力】\n位於兩眉之間的眉輪，像似第三隻眼，幫助我們平靜判斷事物。\n調整：心平靜和，放鬆，讓緊繃的心情平靜，思慮清晰",
+    "cardSubtitle": "眉心輪THIRD-EYE CHAKRA<br>#溝通 #思路清晰",
+    "cardInfo": "今年的能量目標：「放鬆」尋找生活的慵懶時光<br>眉心輪對應著我們對內在選擇的能力，真實自我與靈性的中心，此中心的平穩與穩定，是一種具創造力的慵懶，適度的壓力釋放，在緊繃的生活中，找回慵懶的美好生活",
+    "cardOil":"｜花梨木｜佛手柑｜洋甘菊｜",
     "cardImage": "5.png",
-    "link": "https://www.savunbio.com/products/lazy-cozy"
+    "link": "https://www.savunbio.com/products/lazy-cozy",
+    "downloadImage":"download-2.jpg"
   },
   {
     "cardTitle": "好好睡-Relaxing & Release",
-    "cardSubtitle": "頂輪(SAHASRARA) ROOT CHAKRA",
-    "cardInfo": "我深根在這\n我屬於這裡\n我放下一切懷疑與擔憂\n我擁有一切我需要的。\n【掌管靈性、人體能量的中心】\n專注自我，靜夜中自我平靜對話，\n深夜中感受內心溫暖。\n調整：平靜內在，自我對話，\n並給予身心良好睡眠。",
+    "cardSubtitle": "頂輪CROWN CHAKRA<br>#舒壓解悶 #助眠",
+    "cardInfo": "今年的能量目標：睡眠的「重整」，自我對話<br>睡眠在生活中是非常重要的，多數人在每天的工作壓力中難以入眠，不安在腦中打轉，讓自己每天保持良好的睡眠，能幫助平靜思慮、重整",
+    "cardOil":"｜佛手柑｜薰衣草｜花梨木｜",
     "cardImage": "1.png",
-    "link": "https://www.savunbio.com/products/relaxingrelease"
+    "link": "https://www.savunbio.com/products/relaxingrelease",
+    "downloadImage":"download-1.jpg"
   }
 ]
 
@@ -151,8 +167,11 @@
     document.getElementById("card-title").innerHTML = cards[randomNum].cardTitle;
     document.getElementById("card-subtitle").innerHTML = cards[randomNum].cardSubtitle;
     document.getElementById("card-info").innerHTML = cards[randomNum].cardInfo;
+    document.getElementById("card-oil").innerHTML = cards[randomNum].cardOil;
     document.getElementById("link").setAttribute("href",cards[randomNum].link);
+    document.getElementById("downloadlink").setAttribute("href",cards[randomNum].downloadImage);
 
+    
 
   </script>
 
