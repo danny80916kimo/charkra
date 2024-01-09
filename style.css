@@ -6,9 +6,26 @@
   text-align: center
 
 }
-.img { 
-  display: inline-block;
+.img-button { 
+  display: inline;
+  justify-content: center;
+  
+
+}
+.btn-div{
+  display: flex;
+  letter-spacing: 10px;
+  justify-content: center;
+  gap: 5px;
+}
+#link{
+  display: inline;
+  width: 150px;
+}
+
+.button-image{
   text-align: center;
+  display: inline;
 }
 
 html {
@@ -62,6 +79,10 @@ h1 , h2{
   position: relative;; 
   z-index: 0;
 }
+
+#downloadlink{
+  margin: 30px;
+}
 #btn{
   padding: 10px;
   border-style:solid;
@@ -72,8 +93,6 @@ h1 , h2{
   font-size: large;
   text-decoration: none;
   border-radius: 10px;
-
-
 }
 #btn:hover{
   /* background-color: blue; */
@@ -110,24 +129,13 @@ h1 , h2{
   
 }
 .card-link{
-
+  align-items: center;
+  display: flex;
   color: azure;
   position: relative;
-
+  flex-direction: column;
+  gap: 30px 30px;
 }
-
-/* .card-link{
-  z-index: 10000;
-  width: 100%;
-  color: azure;
-  margin-top: 20px;
-  text-decoration: none;
-}
-.card-link:hover,:link,:active,:visited{
-  text-decoration: none;
-  color: azure;
-} */
-
 
 
 #spin2{
@@ -184,7 +192,7 @@ h1 , h2{
 .card_container{
   z-index: 10;
   opacity: 1;
-  margin: 5% 5% 2% 5%;
+  margin: 2% 2% 2% 2%;
   display: flex;
  flex-wrap: wrap; 
  opacity: 1;
@@ -211,7 +219,7 @@ h1 , h2{
 .card{
   padding: 5px;
   margin: auto 50px auto 50px ;;
-  line-height:3em;
+  line-height:25px;
   color: azure;
   width: 40%;
   font-family: "Noto Sans TC";
