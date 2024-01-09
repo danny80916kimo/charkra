@@ -6,6 +6,10 @@
   text-align: center
 
 }
+.img { 
+  display: inline-block;
+  text-align: center;
+}
 
 html {
   height:100%; 
