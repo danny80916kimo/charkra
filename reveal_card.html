@@ -2,20 +2,20 @@
 <html>
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-88W75FYX88"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-88W75FYX88"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-88W75FYX88');
-</script>
- <!-- Google tag (gtag.js) -->
+    gtag('config', 'G-88W75FYX88');
+  </script>
+  <!-- Google tag (gtag.js) -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet" />
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
-  
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, 
                                   minimum-scale=1, maximum-scale=1, user-scalable=no" />
@@ -79,30 +79,20 @@
       </div>
       <div class="card-link">
         <div class="btn-div">
-          <a class="btn" id="link" href="">了解精油</a>
-          <a class="btn"  href="index.html">再抽一次</a>
-          </a>
+          <a class="btn" id="link" href="">內在調頻</a>
+          <a class="btn" id="sprayLink" href="">空間調頻</a>
         </div>
-        <div style = "width:100%;">
+        <div class="btn-div">
+          <a class="btn" href="index.html">再抽一次</a>
+        </div>
+        <div class="btn-div">
           <a class="btn" id="downloadlink" href="">儲存圖片</a>
-        
-
         </div>
-        <div style = "width:100%;">
-          <a class="btn" href="https://www.instagram.com/venetia_nature/" >INSTAGRAM</a>
+        <div class="btn-div">
+          <a class="btn" href="https://www.instagram.com/venetia_nature/">INSTAGRAM</a>
         </div>
-        
-       
       </div>
-
-
-
-
-
     </div>
-
-
-
   </div>
 
   <script>
@@ -118,6 +108,7 @@
         "cardOil": "｜檸檬馬鞭草、薄荷、佛手柑｜",
         "cardImage": "7.png",
         "link": "https://www.savunbio.com/products/kindlywarm",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_kindly_warm",
         "downloadImage": "download-7.jpg"
       },
       {
@@ -127,6 +118,7 @@
         "cardOil": "｜薰衣草｜薄荷｜洋甘菊｜",
         "cardImage": "6.png",
         "link": "https://www.savunbio.com/products/fate-in-love",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_faith_in_love",
         "downloadImage": "download-6.jpg"
       },
       {
@@ -136,6 +128,7 @@
         "cardOil": "｜薄荷｜檸檬馬鞭草｜洋甘菊｜",
         "cardImage": "4.png",
         "link": "https://www.savunbio.com/products/good-luck",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_good_luck",
         "downloadImage": "download-5.jpg"
       },
       {
@@ -145,6 +138,7 @@
         "cardOil": "｜檸檬馬鞭草｜薄荷｜佛手柑｜",
         "cardImage": "2.png",
         "link": "https://www.savunbio.com/products/good-mood",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_goodmood",
         "downloadImage": "download-4.jpg"
       },
       {
@@ -154,6 +148,7 @@
         "cardOil": "｜薄荷｜花梨木｜檸檬馬鞭草｜",
         "cardImage": "3.png",
         "link": "https://www.savunbio.com/products/step-in-nature",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_stepinnature",
         "downloadImage": "download-3.jpg"
       },
       {
@@ -163,6 +158,7 @@
         "cardOil": "｜花梨木｜佛手柑｜洋甘菊｜",
         "cardImage": "5.png",
         "link": "https://www.savunbio.com/products/lazy-cozy",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_lazycozy",
         "downloadImage": "download-2.jpg"
       },
       {
@@ -172,6 +168,7 @@
         "cardOil": "｜佛手柑｜薰衣草｜花梨木｜",
         "cardImage": "1.png",
         "link": "https://www.savunbio.com/products/relaxingrelease",
+        "sprayLink": "https://www.venetia.tw/products/chakra_spray_relaxingrelease",
         "downloadImage": "download-1.jpg"
       }
     ]
@@ -192,6 +189,7 @@
     document.getElementById("card-info").innerHTML = cards[randomNum].cardInfo;
     document.getElementById("card-oil").innerHTML = cards[randomNum].cardOil;
     document.getElementById("link").setAttribute("href", cards[randomNum].link);
+    document.getElementById("sprayLink").setAttribute("href", cards[randomNum].sprayLink);
     document.getElementById("downloadlink").setAttribute("href", cards[randomNum].downloadImage);
 
 
