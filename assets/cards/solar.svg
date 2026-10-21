@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="460" viewBox="0 0 300 460">
+  <defs><radialGradient id="wash"><stop stop-color="#fffff5" stop-opacity=".9"/><stop offset="1" stop-color="#fffff5" stop-opacity="0"/></radialGradient></defs>
+  <rect width="300" height="460" rx="5" fill="#efeacb"/>
+  <ellipse cx="100" cy="197" rx="135" ry="160" fill="url(#wash)"/>
+  <rect x="15" y="15" width="270" height="430" rx="122" fill="none" stroke="#9b8c53" stroke-opacity=".25"/>
+  <text x="150" y="65" font-family="Georgia,serif" font-size="11" letter-spacing="3" text-anchor="middle" fill="#9b8c53">VENETIA</text>
+  <circle cx="150" cy="222" r="103" fill="none" stroke="#9b8c53" stroke-opacity=".2"/>
+  <g fill="none" stroke="#9b8c53" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="150" cy="194" r="47"/><circle cx="150" cy="194" r="33" opacity=".5"/><path d="M150 133v-17m0 156v-17m61-61h17m-156 0h17m18-43-12-12m110 110-12-12m0-86 12-12M95 249l12-12M150 319v-65m0 46c-29 0-42-18-41-34 25 0 40 14 41 34Zm0-12c26 0 40-17 38-33-24 0-38 12-38 33Z"/></g>
+  <path d="M124 346h52" stroke="#9b8c53" stroke-opacity=".45"/>
+  <text x="150" y="383" font-family="Georgia,serif" font-size="10" letter-spacing="2" text-anchor="middle" fill="#9b8c53">SOLAR PLEXUS</text>
+  <text x="150" y="409" font-family="Georgia,serif" font-size="12" letter-spacing="2" text-anchor="middle" fill="#9b8c53">03</text>
+</svg>

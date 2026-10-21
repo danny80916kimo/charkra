@@ -1,182 +1,41 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="zh-Hant">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-88W75FYX88"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-88W75FYX88');
-</script>
- <!-- Google tag (gtag.js) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffff5">
+  <meta name="description" content="留一點時間給自己。跟隨呼吸，抽一張七脈輪能量牌，讓自然與香氣陪你找回日常的平衡。">
+  <title>留一點時間，給自己。｜VENETIA 七脈輪日常指引</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
-  <link rel="preload" href="card.png" as="image">
-  <link rel="preload" href="1.png" as="image">
-  <link rel="preload" href="2.png" as="image">
-  <link rel="preload" href="3.png" as="image">
-  <link rel="preload" href="4.png" as="image">
-  <link rel="preload" href="5.png" as="image">
-  <link rel="preload" href="6.png" as="image">
-  <link rel="preload" href="7.png" as="image">
-  <link rel="preload" href="Instagram_icon.png" as="image">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, 
-                                  minimum-scale=1, maximum-scale=1, user-scalable=no" />
-
-
-                                  
-  <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/css/app.min.css')}" />
-  <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/js/jQuery2.0.2.min.js')}" />
-  <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/js/jquery.touchwipe.min.js')}" />
-  <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
-                'Mobile-Design-Templates-master/common/js/main.min.js')}" />
-
-</head>
-
-<body>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <div clss="wrapper">
-    <div id="particles-js">
-      <img id="spin2" src="spinngWeel.png"></img>
-      <div class="container">
-        <div id="spin_element">
-          <img id="logo" src="logo.png"></img>
-          <img id="spin" src="spinngWeel.png"></img>
-        </div>
-        <div class="title-section">
-          <h1 class="title-text">凡娜緹雅</h1>
-          <h1 class="title-text">七脈輪</h1>
-          <h1 class="title-text">能量占卜</h1>
-        </div>
-        <a id="btn" href="choose_card.html">開 始 占 卜</a>
-      </div>
-
-    </div>
-  </div>
-
+  <script type="module" src="app.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-88W75FYX88"></script>
   <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 355,
-          "density": {
-            "enable": true,
-            "value_area": 300
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
-          }
-        },
-        "opacity": {
-          "value": 0.48927153781200905,
-          "random": false,
-          "anim": {
-            "enable": true,
-            "speed": 0.2,
-            "opacity_min": 0,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 2,
-          "random": true,
-          "anim": {
-            "enable": true,
-            "speed": 2,
-            "size_min": 0,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": false,
-          "distance": 30,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 1,
-          "direction": "none",
-          "random": true,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "window",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "bubble"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 500.91608391608392,
-            "size": 2,
-            "duration": 3,
-            "opacity": 1,
-            "speed": 10
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    }); 
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-88W75FYX88');
   </script>
-
-
-
-
+</head>
+<body>
+  <div class="page">
+    <div class="announcement">EVERYDAY · AROMA · NATURAL</div>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="VENETIA 七脈輪日常指引首頁">
+        <img src="LOGO2.png" alt="VENETIA" width="119" height="29">
+        <span class="brand-name">凡娜緹雅</span>
+      </a>
+      <span class="header-note">一場與自己的溫柔相遇</span>
+      <a class="back-link" href="https://www.venetia.tw/" target="_blank" rel="noopener noreferrer">品牌官網 ↗</a>
+    </header>
+    <main id="app" aria-label="七脈輪日常指引"></main>
+    <noscript><p class="no-script">開啟 JavaScript，就可以開始你的抽牌小儀式。<a href="https://www.venetia.tw/collections/venetia_chakra">也可以先探索七脈輪香氛系列 ↗</a></p></noscript>
+    <footer class="site-footer">
+      <span>© <span id="year">2026</span> VENETIA 凡娜緹雅</span>
+      <a href="https://www.instagram.com/venetia_nature/" target="_blank" rel="noopener noreferrer">把自然與香氣，帶進日常 ↗</a>
+    </footer>
+  </div>
+  <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="toast" class="toast" role="status" hidden></div>
 </body>
-
 </html>

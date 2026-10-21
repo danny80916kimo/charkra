@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="460" viewBox="0 0 300 460">
+  <defs><radialGradient id="wash"><stop stop-color="#fffff5" stop-opacity=".9"/><stop offset="1" stop-color="#fffff5" stop-opacity="0"/></radialGradient></defs>
+  <rect width="300" height="460" rx="5" fill="#e2e8d8"/>
+  <ellipse cx="100" cy="197" rx="135" ry="160" fill="url(#wash)"/>
+  <rect x="15" y="15" width="270" height="430" rx="122" fill="none" stroke="#748967" stroke-opacity=".25"/>
+  <text x="150" y="65" font-family="Georgia,serif" font-size="11" letter-spacing="3" text-anchor="middle" fill="#748967">VENETIA</text>
+  <circle cx="150" cy="222" r="103" fill="none" stroke="#748967" stroke-opacity=".2"/>
+  <g fill="none" stroke="#748967" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M150 320v-84M150 247c-58-15-77-49-65-78 36 0 61 27 65 78Zm0 0c58-15 77-49 65-78-36 0-61 27-65 78Zm0-5c-35-37-33-80 0-112 33 32 35 75 0 112ZM150 292c-30 0-44-18-43-36 26 0 42 16 43 36Zm0 17c29 0 43-17 42-34-26 0-40 15-42 34Z"/></g>
+  <path d="M124 346h52" stroke="#748967" stroke-opacity=".45"/>
+  <text x="150" y="383" font-family="Georgia,serif" font-size="10" letter-spacing="2" text-anchor="middle" fill="#748967">HEART</text>
+  <text x="150" y="409" font-family="Georgia,serif" font-size="12" letter-spacing="2" text-anchor="middle" fill="#748967">04</text>
+</svg>

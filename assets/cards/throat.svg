@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="460" viewBox="0 0 300 460">
+  <defs><radialGradient id="wash"><stop stop-color="#fffff5" stop-opacity=".9"/><stop offset="1" stop-color="#fffff5" stop-opacity="0"/></radialGradient></defs>
+  <rect width="300" height="460" rx="5" fill="#dfebe6"/>
+  <ellipse cx="100" cy="197" rx="135" ry="160" fill="url(#wash)"/>
+  <rect x="15" y="15" width="270" height="430" rx="122" fill="none" stroke="#6f9791" stroke-opacity=".25"/>
+  <text x="150" y="65" font-family="Georgia,serif" font-size="11" letter-spacing="3" text-anchor="middle" fill="#6f9791">VENETIA</text>
+  <circle cx="150" cy="222" r="103" fill="none" stroke="#6f9791" stroke-opacity=".2"/>
+  <g fill="none" stroke="#6f9791" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M150 322V155M150 290C111 290 91 265 92 241c35-2 57 18 58 49ZM150 252c42 0 63-29 61-55-39-1-61 22-61 55ZM150 215c-31 0-47-21-45-41 28 0 45 16 45 41ZM150 182c26 0 40-20 38-36-25-1-38 14-38 36Z"/><path d="m104 254 46 36m0-38 48-42m-80-24 32 29m0-33 27-25" opacity=".5"/><path d="M74 125c29-14 52-14 73-2m-73 11c19-8 35-10 49-7M177 319c20-8 34-8 49-2"/></g>
+  <path d="M124 346h52" stroke="#6f9791" stroke-opacity=".45"/>
+  <text x="150" y="383" font-family="Georgia,serif" font-size="10" letter-spacing="2" text-anchor="middle" fill="#6f9791">THROAT</text>
+  <text x="150" y="409" font-family="Georgia,serif" font-size="12" letter-spacing="2" text-anchor="middle" fill="#6f9791">05</text>
+</svg>
