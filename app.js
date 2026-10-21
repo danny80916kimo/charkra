@@ -1,4 +1,4 @@
-import { cards } from './cards.js?v=2.0.2';
+import { cards } from './cards.js?v=2.0.3';
 
 const app = document.querySelector('#app');
 const announcer = document.querySelector('#announcer');
@@ -26,7 +26,7 @@ function icon(name) {
 const arrow = icon('right');
 
 function steps(active) {
-  return `<nav class="steps" aria-label="抽牌進度">${['靜心', '選牌', '相遇'].map((name, i) => `${i ? '<span class="step-line" aria-hidden="true"></span>' : ''}<span class="${i === active ? 'current' : ''}" ${i === active ? 'aria-current="step"' : ''}>0${i + 1} ${name}</span>`).join('')}</nav>`;
+  return `<nav class="steps" aria-label="抽牌進度">${['靜心', '選牌', '相遇'].map((name, i) => `${i ? '<span class="step-line" aria-hidden="true"></span>' : ''}<span class="step ${i === active ? 'current' : ''}" ${i === active ? 'aria-current="step"' : ''}><span>0${i + 1}</span><span>${name}</span></span>`).join('')}</nav>`;
 }
 
 function announce(text) { announcer.textContent = text; }
@@ -171,7 +171,7 @@ function result(card, signal) {
   app.innerHTML = `<section class="result-main" aria-labelledby="page-title" style="--card-color:${card.color};--card-tint:${card.tint}">
     <div class="result-kicker">${steps(2)}<h1 id="page-title" tabindex="-1">此刻，與你相遇的能量。</h1></div>
     <div class="result-layout">
-      <div class="result-art"><img class="result-image" src="${card.image}" alt="${card.name}的植物線條牌卡" width="300" height="460"><span class="result-number">0${cards.indexOf(card) + 1} / 07 · ${card.theme}</span></div>
+      <div class="result-art"><img class="result-image" src="${card.image}" alt="${card.name}的植物線條牌卡" width="300" height="460"><span class="result-number"><span>0${cards.indexOf(card) + 1} / 07</span><span>· ${card.theme}</span></span></div>
       <div class="result-copy"><p class="eyebrow">A NOTE TO YOURSELF</p><h2>${card.name}</h2><p class="english-name">${card.english}</p>
         <p class="chakra-label">${card.chakra} · ${card.chakraEnglish}</p>
         <p class="affirmation">${card.affirmation}</p><p class="card-message">${card.message}</p>
