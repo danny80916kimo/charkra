@@ -1,4 +1,4 @@
-import { cards } from './cards.js';
+import { cards } from './cards.js?v=2.0.1';
 
 const app = document.querySelector('#app');
 const announcer = document.querySelector('#announcer');

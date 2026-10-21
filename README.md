@@ -31,6 +31,10 @@ npm run dev
 
 使用原生 ES modules、CSS 3D transforms、Web Animations、ResizeObserver 與 Canvas；不需建置或第三方前端套件。保留原有 GitHub Pages / CNAME 部署方式，網站根目錄可直接發佈。舊圖片留在專案中，但新版只引用品牌標誌與新 SVG。
 
+## 更新與快取
+
+GitHub Pages 的靜態檔案可能被快取 10 分鐘。CSS 與 JavaScript 的引用帶有版本參數，避免新 HTML 混用舊版樣式或程式。發佈修改時，請同步更新 `index.html` 的 CSS / JS 版本、`app.js` 匯入 `cards.js` 的版本，以及 `package.json` 的版本。若瀏覽器仍顯示舊頁面，可用強制重新整理載入新版 HTML（Mac：Command + Shift + R；Windows：Ctrl + F5）。
+
 ## 檢查
 
 ```sh
