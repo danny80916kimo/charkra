@@ -1,4 +1,4 @@
-import { cards } from './cards.js?v=2.0.1';
+import { cards } from './cards.js?v=2.0.2';
 
 const app = document.querySelector('#app');
 const announcer = document.querySelector('#announcer');
@@ -14,7 +14,16 @@ const botanical = `<svg class="botanical" viewBox="0 0 110 150" aria-hidden="tru
   <path d="M13 32h8m-4-4v8M89 119h8m-4-4v8" opacity=".6"/>
 </svg>`;
 const cardBack = `<span class="card-back"><span class="card-back-label">VENETIA</span>${botanical}<span class="card-back-foot">日常・指引</span></span>`;
-const arrow = '<span aria-hidden="true">→</span>';
+function icon(name) {
+  const paths = {
+    right: 'M4 12h16m-6-6 6 6-6 6',
+    external: 'M7 17 17 7M7 7h10v10',
+    down: 'M12 4v16m-6-6 6 6 6-6',
+    restart: 'M3 11a9 9 0 1 1 2.9 6.7M3 4v7h7'
+  };
+  return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${paths[name]}"/></svg>`;
+}
+const arrow = icon('right');
 
 function steps(active) {
   return `<nav class="steps" aria-label="抽牌進度">${['靜心', '選牌', '相遇'].map((name, i) => `${i ? '<span class="step-line" aria-hidden="true"></span>' : ''}<span class="${i === active ? 'current' : ''}" ${i === active ? 'aria-current="step"' : ''}>0${i + 1} ${name}</span>`).join('')}</nav>`;
@@ -167,11 +176,11 @@ function result(card, signal) {
         <p class="chakra-label">${card.chakra} · ${card.chakraEnglish}</p>
         <p class="affirmation">${card.affirmation}</p><p class="card-message">${card.message}</p>
         <div class="practice"><h3>給今天的一個小練習</h3><p>${card.practice}</p></div>
-        <div class="result-actions"><button class="button" id="save-card" type="button">收藏這份提醒 <span aria-hidden="true">↓</span></button><button class="button button-outline" id="share-card" type="button">分享今日指引 <span aria-hidden="true">↗</span></button></div>
+        <div class="result-actions"><button class="button" id="save-card" type="button">收藏這份提醒 ${icon('down')}</button><button class="button button-outline" id="share-card" type="button">分享今日指引 ${icon('external')}</button></div>
       </div>
     </div>
-    <div class="result-bottom"><a class="text-link" href="#draw">再給自己一個片刻 ↺</a>
-      <div class="product-links"><a href="https://www.venetia.tw/collections/chakra-oil" target="_blank" rel="noopener noreferrer">探索七脈輪精油 ↗</a><a href="https://www.venetia.tw/collections/chakra_spray" target="_blank" rel="noopener noreferrer">讓香氣陪伴日常 ↗</a></div>
+    <div class="result-bottom"><a class="text-link" href="#draw">再給自己一個片刻 ${icon('restart')}</a>
+      <div class="product-links"><a href="https://www.venetia.tw/collections/chakra-oil" target="_blank" rel="noopener noreferrer">探索七脈輪精油 ${icon('external')}</a><a href="https://www.venetia.tw/collections/chakra_spray" target="_blank" rel="noopener noreferrer">讓香氣陪伴日常 ${icon('external')}</a></div>
       <p class="reflection-note">牌卡是一份自我覺察的邀請。帶走有共鳴的話，依自己的步調前行。</p>
     </div>
   </section>`;
@@ -233,7 +242,7 @@ async function saveCard(card) {
     setTimeout(() => URL.revokeObjectURL(url), 60000);
     toast('提醒小卡已準備好，願它陪你度過今天。');
   } catch { toast('圖片暫時無法儲存，請再試一次。'); }
-  finally { button.disabled = false; button.innerHTML = '收藏這份提醒 <span aria-hidden="true">↓</span>'; }
+  finally { button.disabled = false; button.innerHTML = `收藏這份提醒 ${icon('down')}`; }
 }
 
 function renderRoute(initial = false) {
