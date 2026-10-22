@@ -1,11 +1,12 @@
 {
   "name": "venetia-daily-ritual",
-  "version": "2.0.3",
+  "version": "2.1.1",
   "private": true,
   "type": "module",
   "description": "VENETIA 七脈輪日常指引 — a quiet botanical card ritual",
   "scripts": {
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
-    "check": "node --check app.js && node --check cards.js"
+    "check": "node --check app.js && node --check cards.js && node --check coupon.js && node --check offer.js",
+    "test": "node --test offer.test.js"
   }
 }

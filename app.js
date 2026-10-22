@@ -1,4 +1,5 @@
-import { cards } from './cards.js?v=2.0.3';
+import { cards } from './cards.js?v=2.1.1';
+import { renderCoupon } from './coupon.js?v=2.1.1';
 
 const app = document.querySelector('#app');
 const announcer = document.querySelector('#announcer');
@@ -19,7 +20,11 @@ function icon(name) {
     right: 'M4 12h16m-6-6 6 6-6 6',
     external: 'M7 17 17 7M7 7h10v10',
     down: 'M12 4v16m-6-6 6 6 6-6',
-    restart: 'M3 11a9 9 0 1 1 2.9 6.7M3 4v7h7'
+    restart: 'M3 11a9 9 0 1 1 2.9 6.7M3 4v7h7',
+    back: 'M20 12H4m6-6-6 6 6 6',
+    copy: 'M9 9h11v11H9zM15 9V4H4v11h5',
+    check: 'M5 12l4 4L19 6',
+    gift: 'M3 8h18v5H3zM5 13v8h14v-8M12 8v13M12 8H8a3 3 0 1 1 3-3l1 3Zm0 0h4a3 3 0 1 0-3-3l-1 3Z'
   };
   return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${paths[name]}"/></svg>`;
 }
@@ -176,7 +181,7 @@ function result(card, signal) {
         <p class="chakra-label">${card.chakra} · ${card.chakraEnglish}</p>
         <p class="affirmation">${card.affirmation}</p><p class="card-message">${card.message}</p>
         <div class="practice"><h3>給今天的一個小練習</h3><p>${card.practice}</p></div>
-        <div class="result-actions"><button class="button" id="save-card" type="button">收藏這份提醒 ${icon('down')}</button><button class="button button-outline" id="share-card" type="button">分享今日指引 ${icon('external')}</button></div>
+        <div class="result-actions"><button class="button" id="save-card" type="button">收藏這份提醒 ${icon('down')}</button><a class="button button-outline" id="coupon-link" href="coupon.html?v=2.1.1&card=${card.id}">領取優惠折扣碼 ${icon('gift')}</a></div>
       </div>
     </div>
     <div class="result-bottom"><a class="text-link" href="#draw">再給自己一個片刻 ${icon('restart')}</a>
@@ -185,14 +190,6 @@ function result(card, signal) {
     </div>
   </section>`;
   document.querySelector('#save-card').addEventListener('click', () => saveCard(card), { signal });
-  document.querySelector('#share-card').addEventListener('click', async () => {
-    const data = { title: `${card.name}｜VENETIA 日常指引`, text: card.affirmation, url: location.href };
-    try {
-      if (navigator.share) await navigator.share(data);
-      else if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(`${data.text}\n${data.url}`); toast('已複製今日指引連結，可以分享給在乎的人。'); }
-      else toast('複製瀏覽器的網址，就能分享這張牌。');
-    } catch (error) { if (error.name !== 'AbortError') toast('可以複製瀏覽器的網址，分享這張牌。'); }
-  }, { signal });
   announce(`你抽到了${card.name}。${card.affirmation}`);
 }
 
@@ -251,7 +248,11 @@ function renderRoute(initial = false) {
   clearTimeout(toastTimer);
   document.querySelector('#toast').hidden = true;
   const route = location.hash.slice(1);
-  if (route === 'draw') draw(scope.signal);
+  if (document.body.dataset.page === 'coupon') {
+    const card = cards.find(c => c.id === new URLSearchParams(location.search).get('card'));
+    renderCoupon({ app, card, signal: scope.signal, icon, announce });
+  }
+  else if (route === 'draw') draw(scope.signal);
   else if (route === 'reading' || route.startsWith('reading/')) {
     let card = cards.find(c => c.id === route.split('/')[1]);
     if (!card) {
